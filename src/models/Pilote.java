@@ -4,6 +4,7 @@ import java.text.DecimalFormat;
 
 public class Pilote {
     public final static int NOMBRE_PNEUS_EM_RESERVE = 16;
+    //MR Il ne faut pas mettre static ici car chaque pilote a son propre nom et nationalité, plutôt final pour indiquer que ces valeurs ne changeront pas.
     private static String nom;
     private static String nationalite;
     private int nombrePoints;
@@ -112,6 +113,7 @@ public class Pilote {
                 pressionMoyenneDesPneusEnReserce += pneusEnReserve[i].getPression();
             }
         }
+        //MR Il faut vérifier si nbrePneuEnReserve n'est pas 0 pour éviter la division par zéro
         if (pressionMoyenneDesPneusEnReserce != 0) {
             pressionMoyenneDesPneusEnReserce = pressionMoyenneDesPneusEnReserce / nbrePneuEnReserve;
         }

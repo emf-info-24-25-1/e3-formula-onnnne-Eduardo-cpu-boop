@@ -3,6 +3,7 @@ package models;
 import java.text.DecimalFormat;
 
 public class Pneu {
+    // MR Tu as oublié le mot-clé final pour indiquer que ces valeurs ne changeront pas
     private TypePneu type;
     private double pression;
 

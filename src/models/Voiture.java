@@ -3,6 +3,7 @@ package models;
 import java.text.DecimalFormat;
 
 public class Voiture {
+    //MR Ce n'est pas static, mais final pour indiquer que ces valeurs ne changeront pas
     private static int numero;
     private static String nomEquipe;
 
@@ -22,6 +23,7 @@ public class Voiture {
     @Override
     public String toString() {
         DecimalFormat format = new DecimalFormat("000");
+        //MR Tu n'utilises pas le formatage du numéro de la voiture
         return "Voiture n°" + numero + " de l'équipe '" + nomEquipe + "'";
     }
 
